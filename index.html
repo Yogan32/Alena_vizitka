@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1f5f9">
+  <meta name="description" content="Алёна Мазурова — IP-юрист. Охрана и защита объектов интеллектуальной собственности.">
+  <title>Алёна Мазурова — IP-юрист</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      color: #f3f5ff;
+      background: #f1f5f9;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      min-width: 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: clamp(1rem, 5vw, 4rem);
+      background: radial-gradient(circle at 50% 45%, #e0e7ff 0%, #c7d2fe 45%, #a5b4fc 100%);
+    }
+
+    .card {
+      position: relative;
+      isolation: isolate;
+      display: grid;
+      grid-template-columns: minmax(0, 1.18fr) minmax(0, .82fr);
+      align-items: center;
+      gap: clamp(1rem, 4vw, 3rem);
+      width: min(100%, 58rem);
+      padding: clamp(2rem, 6.2vw, 5.25rem);
+      color-scheme: light;
+      border: 1.5px solid rgba(255, 255, 255, 0.9);
+      border-radius: clamp(1.5rem, 4vw, 2.75rem);
+      background: linear-gradient(135deg, #5eead4 0%, #93c5fd 48%, #c4b5fd 100%);
+      box-shadow: 0 30px 60px -12px rgba(30, 27, 75, 0.35);
+      animation: card-enter .65s cubic-bezier(.22, 1, .36, 1) both;
+    }
+
+    .guilloche {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      width: min(48%, 27rem);
+      height: auto;
+      border-top-right-radius: inherit;
+      color: #ffffff;
+      opacity: 0.22;
+      pointer-events: none;
+    }
+
+    @keyframes card-enter {
+      from { opacity: 0; transform: translateY(1rem); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+      margin: 0 0 1.15rem;
+      color: #1e1b4b;
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 1.75rem;
+      height: 2px;
+      background: currentColor;
+    }
+
+    h1 {
+      width: fit-content;
+      margin: 0;
+      color: #141129;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.55rem, 6.5vw, 5.55rem);
+      font-weight: 400;
+      line-height: 1.04;
+      letter-spacing: -.055em;
+      text-shadow:
+        -1px -1px 0 rgba(255, 255, 255, 0.75),
+        1px 1px 0 #2e2a5e,
+        2px 2px 0 #1e1b4b,
+        3px 4px 10px rgba(20, 17, 41, 0.35);
+    }
+
+    h1 span { display: block; }
+
+    .description {
+      max-width: 29ch;
+      margin: 1.45rem 0 0;
+      color: #1e293b;
+      font-size: clamp(1rem, 1.7vw, 1.2rem);
+      line-height: 1.65;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .75rem;
+      margin-top: clamp(1.6rem, 4vw, 2.5rem);
+    }
+
+    .contact a {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3.35rem;
+      border: 1px solid transparent;
+      border-radius: 100vw;
+      background: linear-gradient(180deg, rgba(91, 82, 182, 0.88) 0%, rgba(67, 56, 202, 0.92) 100%);
+      color: #ffffff;
+      text-decoration: none;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 10px 20px -5px rgba(30, 27, 75, 0.45);
+      transition: all 0.25s ease;
+    }
+
+    .write {
+      padding: .75rem 1.45rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .contact a::after {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      content: "";
+      background: linear-gradient(105deg, transparent 18%, #ffffff59 50%, transparent 82%);
+      pointer-events: none;
+      transform: translateX(-110%);
+      animation: shine 4s ease-in-out infinite;
+    }
+
+    .social { width: 3.35rem; }
+    .social svg { width: 1.32rem; height: 1.32rem; }
+
+    .contact a:focus-visible {
+      outline: 2px solid #4f46e5;
+      outline-offset: 5px;
+    }
+
+    @media (hover: hover) {
+      .contact a:hover {
+        transform: translateY(-3px);
+        box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 13px 23px -6px rgba(30, 27, 75, 0.5);
+      }
+    }
+
+    .contact a:active {
+      transform: translateY(1px);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 4px 9px -4px rgba(30, 27, 75, 0.45);
+    }
+
+    @keyframes shine {
+      0%, 75% { transform: translateX(-110%); }
+      100% { transform: translateX(110%); }
+    }
+
+    .portrait {
+      justify-self: center;
+      width: min(100%, 17rem);
+      aspect-ratio: 1;
+      overflow: hidden;
+      border: 3px solid #ffffff;
+      border-radius: 50%;
+      background-color: #f2f0ff;
+      box-shadow: 0 12px 30px rgba(30, 27, 75, 0.18), 0 0 25px rgba(255, 255, 255, 0.45);
+    }
+
+    .portrait img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 43rem) {
+      .card {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        gap: .9rem;
+        text-align: center;
+      }
+
+      .portrait { grid-row: 1; width: min(9.5rem, 60%); margin-bottom: .5rem; }
+      .eyebrow, .contact { justify-content: center; }
+      h1, .description { margin-inline: auto; }
+      h1 { font-size: clamp(2.55rem, 10vw, 4.5rem); }
+      .description { margin-top: 1.05rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card { animation: none; }
+      .contact a { transition: none; }
+      .contact a:is(:hover, :active) { transform: none; }
+      .contact a::after { animation: none; }
+    }
+
+    @media (forced-colors: active) {
+      h1 { color: CanvasText; }
+      .contact :is(.write, .social) { border-color: LinkText; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card" aria-labelledby="name">
+    <svg class="guilloche" viewBox="0 0 440 340" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true" focusable="false">
+      <defs>
+        <path id="guilloche-loop" d="M-176 0C-176-26-114-55-76-56C-34-57-22-39 0-39C22-39 34-57 76-56C114-55 176-26 176 0S114 55 76 56C34 57 22 39 0 39C-22 39-34 57-76 56C-114 55-176 26-176 0Z"/>
+      </defs>
+      <g transform="translate(340 100)">
+        <use href="#guilloche-loop"/>
+        <use href="#guilloche-loop" transform="rotate(15)"/>
+        <use href="#guilloche-loop" transform="rotate(30)"/>
+        <use href="#guilloche-loop" transform="rotate(45)"/>
+        <use href="#guilloche-loop" transform="rotate(60)"/>
+        <use href="#guilloche-loop" transform="rotate(75)"/>
+        <use href="#guilloche-loop" transform="rotate(90)"/>
+        <use href="#guilloche-loop" transform="rotate(105)"/>
+        <use href="#guilloche-loop" transform="rotate(120)"/>
+        <use href="#guilloche-loop" transform="rotate(135)"/>
+        <use href="#guilloche-loop" transform="rotate(150)"/>
+        <use href="#guilloche-loop" transform="rotate(165)"/>
+      </g>
+    </svg>
+    <div>
+      <p class="eyebrow">IP-юрист</p>
+      <h1 id="name"><span>Алёна</span> <span>Мазурова</span></h1>
+      <p class="description">Охрана и защита объектов интеллектуальной собственности</p>
+      <nav class="contact" aria-label="Связаться с Алёной">
+        <a class="write" href="https://max.ru/u/f9LHodD0cOJYtri9XNe4-ZXyLkVRMYSVJfC-2z8ag8myhGZQ5reNA_uR9hU" target="_blank" rel="noopener noreferrer">Написать мне</a>
+        <a class="social" href="https://max.ru/u/f9LHodD0cOJYtri9XNe4-ZXyLkVRMYSVJfC-2z8ag8myhGZQ5reNA_uR9hU" target="_blank" rel="noopener noreferrer" aria-label="Написать в MAX" title="Написать в MAX">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H11a7.5 7.5 0 0 1-2.5-.43L4 20l1.43-3.82A7.5 7.5 0 0 1 4 11.5 7.5 7.5 0 0 1 11.5 4h1a7.5 7.5 0 0 1 7.5 7.5Z"/>
+            <path d="M8.5 11.5h7"/>
+          </svg>
+        </a>
+      </nav>
+    </div>
+    <div class="portrait">
+      <img alt="Алёна Мазурова" src="images/avatar.jpg">
+    </div>
+  </main>
+</body>
+</html>
